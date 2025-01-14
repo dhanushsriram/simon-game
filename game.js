@@ -7,13 +7,15 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
+$("#start-btn").click(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
+    $("#start-btn").hide(); // Hide the button after starting the game
   }
 });
+
 
 $(".btn").click(function() {
 
@@ -37,7 +39,7 @@ function checkAnswer(currentLevel) {
     } else {
       playSound("wrong");
       $("body").addClass("game-over");
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over!");
 
       setTimeout(function () {
         $("body").removeClass("game-over");
@@ -76,4 +78,21 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+  $("#start-btn").show(); // Show the button again to restart
 }
+// Show the modal when the instructions button is clicked
+$("#instructions-btn").click(function() {
+  $("#instructions-modal").fadeIn(); // Show the modal
+});
+
+// Close the modal when the close button is clicked
+$("#close-modal").click(function() {
+  $("#instructions-modal").fadeOut(); // Hide the modal
+});
+
+// Close the modal when clicking outside of it
+$(window).click(function(event) {
+  if ($(event.target).is("#instructions-modal")) {
+    $("#instructions-modal").fadeOut(); // Hide the modal
+  }
+});

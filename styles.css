@@ -5,8 +5,8 @@ body {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
+  font-size: 2.5rem;
+  margin:  3%;
   color: #FEF2BF;
 }
 
@@ -50,4 +50,101 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+.start-btn {
+  background-color: #FEF2BF;
+  color: #011F3F;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.13rem;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.start-btn:hover {
+  background-color: #011F3F;
+  color: #FEF2BF;
+}
+/* Instructions Button - Bottom Right */
+.instructions-btn {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #FEF2BF;
+  color: #011F3F;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1 rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2; /* Ensures it stays above other elements */
+}
+
+.instructions-btn:hover {
+  background-color: #011F3F;
+  color: #FEF2BF;
+}
+
+/* GitHub Button - Bottom Left */
+.github-btn {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  left: 20px; /* Distance from the left */
+  background-color: #011F3F;
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1 rem;
+  padding: 10px 20px;
+  text-decoration: none; /* Remove underline */
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2; /* Ensures it stays above other elements */
+}
+
+.github-btn:hover {
+  background-color: #FEF2BF;
+  color: #011F3F;
+}
+
+
+
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #FEF2BF;
+  color: #011F3F;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.close-btn {
+  color: #011F3F;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+.container {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 70px; /* Adds space for the button */
 }
